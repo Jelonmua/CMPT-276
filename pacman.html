@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pacman</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 36px;
+        color: white;
+      }
+
+      .pacman {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .game-panel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 600px;
+        color: white;
+        font-size: 26px;
+      }
+
+      .canvas-container canvas {
+        width: 600px;
+        height: 600px;
+        border: solid 4px blue;
+      }
+
+      .game-description {
+        color: white;
+        margin-left: 20px;
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pacman</h1>
+    <div class="pacman">
+      <div class="game">
+        <div class="game-panel">
+          <div id="time">60</div>
+          <div id="score">0</div>
+        </div>
+        <div class="canvas-container">
+          <canvas id="pacman" width="600" height="600"></canvas>
+        </div>
+      </div>
+      <div class="game-description">
+        <h2>Game Current Status</h2>
+        <p id="state">INITIAL</p>
+        <h2>How to play</h2>
+        <p>Press `s` to start the game.</p>
+        <p>Press `p` to pause the game</p>
+        <p>Press `r` to resume the game</p>
+        <p>Press 'shift + r` to restart the game</p>
+        <p>Press `↑` to move up</p>
+        <p>Press `↓` to move down</p>
+        <p>Press `←` to move left</p>
+        <p>Press `→` to move right</p>
+      </div>
+    </div>
+    <script type="module" src="./pacman.js"></script>
+  </body>
+</html>
